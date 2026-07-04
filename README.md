@@ -120,7 +120,7 @@ data pipeline actually requires, not just a happy-path ETL.
 | `01_silver_initial_data_exploration.ipynb` | Broad first-pass profiling of every table |
 | `02_silver_data_transformation_findings.ipynb` | Deep-dive audit — documents every specific issue found per table before any fix is applied |
 | `03_silver_data_cleaning.ipynb` | Fixes every issue identified in `02`, writes cleaned data back to `blinkit_silver` |
-| `silver_restructuring.sql` |  corrects column types in `blinkit_silver` (`TEXT`/`DOUBLE`/`DATETIME` → proper `VARCHAR`/`INT`/`DECIMAL`/`DATE`) |
+| `02_silver_restructuring.sql` |  corrects column types in `blinkit_silver` (`TEXT`/`DOUBLE`/`DATETIME` → proper `VARCHAR`/`INT`/`DECIMAL`/`DATE`) |
 | `04_gold_layer_build.ipynb` | Builds the `blinkit_gold` star schema (dimensions + facts) from cleaned Silver data |
 | `03_gold.sql` | Creates `blinkit_gold` and adds primary/foreign key constraints across the star schema |
 | `04_gold_business_questions.sql` | 13 SQL queries answering concrete business questions against `blinkit_gold` |
