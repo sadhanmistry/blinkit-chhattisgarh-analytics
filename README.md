@@ -123,9 +123,9 @@ data pipeline actually requires, not just a happy-path ETL.
 | `silver_restructuring.sql` |  corrects column types in `blinkit_silver` (`TEXT`/`DOUBLE`/`DATETIME` → proper `VARCHAR`/`INT`/`DECIMAL`/`DATE`) |
 | `04_gold_layer_build.ipynb` | Builds the `blinkit_gold` star schema (dimensions + facts) from cleaned Silver data |
 | `03_gold.sql` | Creates `blinkit_gold` and adds primary/foreign key constraints across the star schema |
-| `05_gold_tables_export_csv.ipynb` | Exports all 9 Gold tables to CSV for direct import into Power BI |
 | `04_gold_business_questions.sql` | 13 SQL queries answering concrete business questions against `blinkit_gold` |
-| `Blinkit_CG_Dashboard.pbix` | The Power BI dashboard file |
+| `05_gold_tables_export_csv.ipynb` | (Optional) Exports all 9 Gold tables to CSV for direct import into Power BI, you can build connection directly in power bi and MySQL |
+| `blinkit_sales_analysis_dashboard.pbix` | The Power BI dashboard file |
 
 ---
 
