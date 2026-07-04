@@ -124,7 +124,7 @@ data pipeline actually requires, not just a happy-path ETL.
 | `gold.sql` | Creates `blinkit_gold` and adds primary/foreign key constraints across the star schema |
 | `05_gold_tables_export_csv.ipynb` | Exports all 9 Gold tables to CSV for direct import into Power BI |
 | `gold_business_questions.sql` | 13 SQL queries answering concrete business questions against `blinkit_gold` |
-| `Blinkit_CG_Dashboard.pbix` | The Power BI dashboard file (add this to the repo) |
+| `Blinkit_CG_Dashboard.pbix` | The Power BI dashboard file |
 
 ---
 
@@ -154,12 +154,65 @@ data pipeline actually requires, not just a happy-path ETL.
 
 ## Key insights
 
-*(Fill in with your own headline numbers pulled from the dashboard — a few strong candidates
-based on the queries in this repo: total FY2025-26 revenue and order count from Sales Overview;
-which store leads on revenue vs. which has the highest cancellation rate from Store Performance;
-the split between new/returning/premium customer revenue from Customer Insights; the average
-delivery delay and top-performing rider from Delivery & Rider Performance; and the store or
-category with the highest stockout rate from Inventory Health.)*
+*Key Insights
+
+Sales
+FY2025-26 closed at ₹456.38 Cr in revenue across 11,15,768 orders (avg order value
+₹4,090), spread over 15 active stores. Revenue grew steadily from ₹26.66 Cr in April to a
+clear festive-season peak in October (₹50.23 Cr, 1.23L orders), sustained into November
+(₹49.48 Cr) before cooling into the winter months — a ~90% jump from the April baseline to the
+October peak, and the clearest seasonal signal in the dataset. Fruits & Vegetables led every
+category at ₹62.38 Cr, ahead of Staples & Grains (₹55.72 Cr) and Dairy & Bakery (₹52.82 Cr).
+UPI dominates payments at 55% of all orders, more than Card, Cash on Delivery, and Wallet
+combined.
+
+Stores
+Performance is heavily concentrated at the top: Blinkit Raipur – VIP Road (₹75.68 Cr) and
+Raipur – Shankar Nagar (₹74.95 Cr) together generate more revenue than the bottom seven
+stores combined, and the three Raipur stores alone account for roughly 40% of total company
+revenue. Despite that revenue spread, cancellation rates are remarkably uniform across every
+store (6.96%–7.16%) — a tight ~0.2-point band — indicating cancellation behavior is a
+store-independent, systemic pattern rather than a location-specific operational problem. The
+ramp-up view confirms the obvious but important pattern: stores live longest (800+ days, the
+original Raipur launches) show the highest orders/day, while newer stores are still climbing —
+store age, not city, is the strongest predictor of daily order volume.
+
+Customers
+The customer base splits into three segments by revenue: Returning customers drive ₹228.3 Cr
+(exceeding New and Premium combined), New customers contribute ₹160.5 Cr, and Premium — the
+smallest segment — still delivers ₹67.62 Cr. The repeat purchase rate sits at 100% at this
+data volume (averaging ~22 orders per customer across 50,000 customers), meaning virtually every
+customer in the dataset returns at least once — a genuinely different retention profile than a
+typical one-and-done e-commerce business. Customers aged 30–49 are the largest cohort (order-bin
+counts of ~10,300–11,200), tapering off sharply past 60.
+
+Delivery & Riders
+This is the sharpest operational finding in the dashboard: on-time delivery sits at just
+50.11%, with deliveries running a consistent ~6-minute delay over the promised time (10.9–11.0
+min promised vs. 16.9–17.0 min actual) — and this gap is nearly identical across every single
+store, meaning it's a fleet-wide SLA issue, not a handful of underperforming locations. The
+delivery status split (46.6% on-time, 46.39% delayed, 7.02% cancelled) reinforces that roughly
+half of all deliveries miss their promised window. On the rider side, top performers like Ikbal
+Kothari (3,099 deliveries) and Chakradev Barad (2,799 deliveries) handle meaningfully more
+volume than the rest of the leaderboard, suggesting an uneven workload distribution worth
+investigating.
+
+Inventory
+Stockouts hover in a tight 11.8%–12.2% band across all stores, with Blinkit Durg – Ashish
+Nagar the single worst performer — but the narrow spread suggests this is closer to a
+structural reorder-threshold issue than a store-specific failure. Fruits & Vegetables has the
+most low-stock events (7.6K), consistent with it also being the top-selling category — high
+turnover categories are, unsurprisingly, the hardest to keep stocked. The average stock level
+trend is fairly flat (247–250 units) with a visible dip in July, but the swings are small enough
+that this reads as noise rather than a seasonal inventory pattern.
+
+Overall
+The standout tension in this dataset is between a healthy, growing top-line (steady MoM growth,
+a strong festive peak, high customer retention) and a fragile fulfillment layer underneath it —
+a coin-flip on-time rate and a consistent 6-minute SLA miss across the entire fleet. If this were
+a real business, the fastest lever to pull isn't more marketing or more SKUs — it's fixing
+delivery promise-setting or rider capacity, since half of all customers are currently experiencing
+a late delivery regardless of which store served them.*
 
 ---
 
