@@ -154,8 +154,6 @@ data pipeline actually requires, not just a happy-path ETL.
 
 ## Key insights
 
-*Key Insights
-
 Sales
 FY2025-26 closed at ₹456.38 Cr in revenue across 11,15,768 orders (avg order value
 ₹4,090), spread over 15 active stores. Revenue grew steadily from ₹26.66 Cr in April to a
@@ -212,7 +210,7 @@ a strong festive peak, high customer retention) and a fragile fulfillment layer 
 a coin-flip on-time rate and a consistent 6-minute SLA miss across the entire fleet. If this were
 a real business, the fastest lever to pull isn't more marketing or more SKUs — it's fixing
 delivery promise-setting or rider capacity, since half of all customers are currently experiencing
-a late delivery regardless of which store served them.*
+a late delivery regardless of which store served them.
 
 ---
 
