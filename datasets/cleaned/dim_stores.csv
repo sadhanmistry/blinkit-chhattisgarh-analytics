@@ -1,0 +1,16 @@
+store_id,store_name,city,area,latitude,longitude,store_size_sqft,opening_date,store_status,manager_name,state,store_age_days
+ST001,Blinkit Raipur - Shankar Nagar,Raipur,Shankar Nagar,21.2306,81.644609,1928,2024-12-20,Active,Aryan Maharaj,Chhattisgarh,466
+ST002,Blinkit Raipur - Shankar Nagar,Raipur,Shankar Nagar,21.212379,81.603556,1836,2024-12-28,Active,Udant Dewan,Chhattisgarh,458
+ST003,Blinkit Raipur - VIP Road,Raipur,VIP Road,21.245075,81.629264,1913,2025-01-15,Active,Gagan Sami,Chhattisgarh,440
+ST004,Blinkit Bhilai - Vaishali Nagar,Bhilai,Vaishali Nagar,21.211388,81.366456,1540,2025-01-10,Active,Ayushman Chander,Chhattisgarh,445
+ST005,Blinkit Bhilai - Smriti Nagar,Bhilai,Smriti Nagar,21.216345,81.36025,1772,2025-02-05,Active,Viraj Tiwari,Chhattisgarh,419
+ST006,Blinkit Raipur - Avanti Vihar,Raipur,Avanti Vihar,21.258775,81.610422,1272,2025-02-20,Active,Rushil Saini,Chhattisgarh,404
+ST007,Blinkit Bhilai - Vaishali Nagar,Bhilai,Vaishali Nagar,21.192801,81.347203,1993,2025-03-01,Active,Saumya Mall,Chhattisgarh,395
+ST008,Blinkit Bilaspur - Tarbahar,Bilaspur,Tarbahar,22.104151,82.136009,1425,2025-03-10,Active,Nathaniel Sami,Chhattisgarh,386
+ST009,Blinkit Raipur - VIP Road,Raipur,VIP Road,21.244357,81.640246,1934,2025-03-20,Active,Arunima Dugal,Chhattisgarh,376
+ST010,Blinkit Durg - Malviya Nagar,Durg,Malviya Nagar,21.198655,81.293516,1052,2025-03-05,Active,Gayathri Chaudry,Chhattisgarh,391
+ST011,Blinkit Bilaspur - Link Road,Bilaspur,Link Road,22.071572,82.128855,1893,2025-04-15,Active,Lajita Chatterjee,Chhattisgarh,350
+ST012,Blinkit Durg - Ashish Nagar,Durg,Ashish Nagar,21.20272,81.307479,1444,2025-05-01,Active,Hemangini Lalla,Chhattisgarh,334
+ST013,Blinkit Bilaspur - Vyapar Vihar,Bilaspur,Vyapar Vihar,22.062897,82.12261,1155,2025-05-20,Active,Tripti Yadav,Chhattisgarh,315
+ST014,Blinkit Korba - Transport Nagar,Korba,Transport Nagar,22.374365,82.760963,1803,2025-07-01,Active,Kritika Brar,Chhattisgarh,273
+ST015,Blinkit Rajnandgaon - Station Para,Rajnandgaon,Station Para,21.102043,81.041134,1998,2025-08-15,Active,Janaki Handa,Chhattisgarh,228
