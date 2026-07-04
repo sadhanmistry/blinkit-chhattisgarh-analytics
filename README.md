@@ -29,7 +29,7 @@ inventory health, visualized in an interactive multi-page dashboard.
 
 | Home | Sales Overview |
 |---|---|
-| ![Home](screenshots/01_home.png) | ![Sales](screenshots/02_sales.png) |
+| ![Home](dashboard/01_home.png) | ![Sales](screenshots/02_sales.png) |
 
 | Store Performance | Customer Insights |
 |---|---|
