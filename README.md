@@ -29,18 +29,17 @@ inventory health, visualized in an interactive multi-page dashboard.
 
 | Home | Sales Overview |
 |---|---|
-| ![Home](dashboard/01_home.png) | ![Sales](screenshots/02_sales.png) |
+| ![Home](dashboard/01_home.png) | ![Sales](dashboard/02_sales.png) |
 
 | Store Performance | Customer Insights |
 |---|---|
-| ![Stores](screenshots/03_stores.png) | ![Customers](screenshots/04_customers.png) |
+| ![Stores](dashboard/03_stores.png) | ![Customers](dashboard/04_customers.png) |
 
 | Delivery & Rider Performance | Inventory Health |
 |---|---|
-| ![Delivery](screenshots/05_delivery.png) | ![Inventory](screenshots/06_inventory.png) |
+| ![Delivery](dashboard/05_delivery.png) | ![Inventory](dashboard/06_inventory.png) |
 
-*(Add your six dashboard screenshots to a `screenshots/` folder in the repo with these filenames,
-or update the paths above to match whatever you name them.)*
+
 
 ---
 
