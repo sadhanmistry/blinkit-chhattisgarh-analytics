@@ -116,14 +116,15 @@ data pipeline actually requires, not just a happy-path ETL.
 | File | Purpose |
 |---|---|
 | `01_bronze_data_import.ipynb` | Loads raw CSVs into `blinkit_bronze`, untouched |
+| `01_silver_data_import.sql` | Copy raw data from `blinkit_bronze` to `blinkit_silver` , as-is |
 | `01_silver_initial_data_exploration.ipynb` | Broad first-pass profiling of every table |
 | `02_silver_data_transformation_findings.ipynb` | Deep-dive audit — documents every specific issue found per table before any fix is applied |
 | `03_silver_data_cleaning.ipynb` | Fixes every issue identified in `02`, writes cleaned data back to `blinkit_silver` |
-| `silver.sql` | Creates `blinkit_silver`, copies data from Bronze, and corrects column types (`TEXT`/`DOUBLE`/`DATETIME` → proper `VARCHAR`/`INT`/`DECIMAL`/`DATE`) |
+| `silver_restructuring.sql` |  corrects column types in `blinkit_silver` (`TEXT`/`DOUBLE`/`DATETIME` → proper `VARCHAR`/`INT`/`DECIMAL`/`DATE`) |
 | `04_gold_layer_build.ipynb` | Builds the `blinkit_gold` star schema (dimensions + facts) from cleaned Silver data |
-| `gold.sql` | Creates `blinkit_gold` and adds primary/foreign key constraints across the star schema |
+| `03_gold.sql` | Creates `blinkit_gold` and adds primary/foreign key constraints across the star schema |
 | `05_gold_tables_export_csv.ipynb` | Exports all 9 Gold tables to CSV for direct import into Power BI |
-| `gold_business_questions.sql` | 13 SQL queries answering concrete business questions against `blinkit_gold` |
+| `04_gold_business_questions.sql` | 13 SQL queries answering concrete business questions against `blinkit_gold` |
 | `Blinkit_CG_Dashboard.pbix` | The Power BI dashboard file |
 
 ---
